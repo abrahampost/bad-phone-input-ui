@@ -1,0 +1,34 @@
+.number-slider {
+    position: relative;
+    padding-top: 100px;
+    width: 40px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.number-slider__outer {
+    position: relative;
+    top: 0;
+    height: 100px;
+    width: 100%;
+
+    background-color: red;
+    border-radius: 10px;
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.number-slider__inner {
+    width: 100%;
+    background-color: blue;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
