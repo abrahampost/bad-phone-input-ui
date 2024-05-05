@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import './App.css'
 import NumberSlider from './components/NumberSlider'
 
@@ -7,7 +7,7 @@ type NullableNum = number | null;
 function App() {
 
   const [ number, setNumber ] = useState<NullableNum[]>([null, null, null, null, null, null, null, null, null, null]);
-  const finished = useMemo(() => number.every((val) => val !== null), number);
+  const finished = number.every((val) => val !== null);
 
   const [ currentIndex, setCurrentIndex ] = useState(0);
   const numberSliderCallback = (index: number) => (val: number) => {
