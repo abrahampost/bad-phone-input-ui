@@ -44,7 +44,7 @@ jobs:
       - name: Build project
         run: npm run build
         env:
-          VITE_BASE: https://abrahampost.github.io/bad-phone-input-ui/
+          VITE_BASE: /bad-phone-input-ui/
 
       # Deploy to GitHub Pages
       - name: Upload artifact
