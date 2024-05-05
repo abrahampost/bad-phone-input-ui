@@ -44,7 +44,7 @@ function NumberSlider({ value, seed, selecting, onChange }: NumberSliderProps) {
                         height: `${value ? value * 10 : currentVal}%`
                     }}></div>
             </div>
-            { <button style={{visibility: (value || !selecting) ? 'hidden' : 'unset'}} onClick={onChange.bind(null, currentVal / 10)}>Set</button> }
+            { <button style={{visibility: (value || !selecting) ? 'hidden' : 'unset'}} onClick={onChange.bind(null, currentVal / 10)}>SET</button> }
             { <p>{value || currentVal / 10}</p> }
         </div>
     );

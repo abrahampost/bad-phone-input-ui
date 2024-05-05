@@ -1,6 +1,6 @@
 .number-slider {
     position: relative;
-    padding-top: 100px;
+    padding-top: 120px;
     width: 40px;
     margin: 0 auto;
     text-align: center;
@@ -12,8 +12,8 @@
     height: 100px;
     width: 100%;
 
-    background-color: red;
-    border-radius: 10px;
+    background-color: cornflowerblue;
+    /* border-radius: 10px; */
     position: absolute;
 
     display: flex;
@@ -23,8 +23,8 @@
 
 .number-slider__inner {
     width: 100%;
-    background-color: blue;
-    border-radius: 10px;
+    background-color: midnightblue;
+    /* border-radius: 10px; */
     position: absolute;
     bottom: 0;
     left: 0;

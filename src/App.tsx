@@ -34,22 +34,22 @@ function App() {
   
   return (
     <>
-      <h1>Phone Number</h1>
-      <p>Enter your phone number:</p>
+      <h1>Phone UX Is Important</h1>
       <div className="phone-number">
+        <p>Enter your phone number:</p>
         <div className='phone-number__selector'>
           { numberSliders}
         </div>
+        { finished && <>
+          <p>Phone number: {number.join('')}</p>
+          <p>Is this your number?</p>
+          <button onClick={() => {
+            setNumber([null, null, null, null, null, null, null, null, null, null]);
+            setCurrentIndex(0);
+          }}>No</button>
+          </>
+        }
       </div>
-      { finished && <>
-        <p>Phone number: {number.join('')}</p>
-        <p>Is this your number?</p>
-        <button onClick={() => {
-          setNumber([null, null, null, null, null, null, null, null, null, null]);
-          setCurrentIndex(0);
-        }}>No</button>
-        </>
-      }
 
     </>
   )
