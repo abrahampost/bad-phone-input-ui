@@ -1,3 +1,9 @@
+.number-sliders {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 .number-slider {
     position: relative;
     padding-top: 120px;
@@ -9,7 +15,7 @@
 .number-slider__outer {
     position: relative;
     top: 0;
-    height: 100px;
+    height: 99px;
     width: 100%;
 
     background-color: cornflowerblue;

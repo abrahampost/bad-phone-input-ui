@@ -16,18 +16,18 @@ function NumberSlider({ value, seed, selecting, onChange }: NumberSliderProps) {
         const interval = setInterval(() => {
             setCurrentVal((prev) => {
                 if (isIncreasing.current) {
-                    if (prev < 100) {
-                        return prev + 10;
+                    if (prev < 99) {
+                        return prev + 11;
                     } else {
                         isIncreasing.current = false;
-                        return prev - 10;
+                        return prev - 11;
                     }
                 } else {
                     if (prev > 0) {
-                        return prev - 10;
+                        return prev - 11;
                     } else {
                         isIncreasing.current = true;
-                        return prev + 10;
+                        return prev + 11;
                     }
                 }
             });
@@ -41,11 +41,11 @@ function NumberSlider({ value, seed, selecting, onChange }: NumberSliderProps) {
                 <div 
                     className="number-slider__inner"
                     style={{
-                        height: `${value ? value * 10 : currentVal}%`
+                        height: `${value ? value * 11 : currentVal}px`
                     }}></div>
             </div>
-            { <button style={{visibility: (value || !selecting) ? 'hidden' : 'unset'}} onClick={onChange.bind(null, currentVal / 10)}>SET</button> }
-            { <p>{value || currentVal / 10}</p> }
+            { <button style={{visibility: (value || !selecting) ? 'hidden' : 'unset'}} onClick={onChange.bind(null, currentVal / 11)}>SET</button> }
+            { <p>{value || currentVal / 11}</p> }
         </div>
     );
 
