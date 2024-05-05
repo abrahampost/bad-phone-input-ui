@@ -34,15 +34,19 @@ jobs:
         with:
           node-version: 20
     
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
       # Build app
       - name: Install NPM packages
         run: npm ci
       - name: Build project
         run: npm run build
+        env:
+          VITE_BASE: ${{ steps.deployment.outputs.page_url }}
 
       # Deploy to GitHub Pages
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
