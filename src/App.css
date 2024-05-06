@@ -1,3 +1,8 @@
+:root {
+    --color-primary: cornflowerblue;
+    --color-secondary: midnightblue;
+}
+
 .phone-number {
     width: 100%;
     display: flex;

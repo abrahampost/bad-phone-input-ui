@@ -18,7 +18,7 @@
     height: 99px;
     width: 100%;
 
-    background-color: cornflowerblue;
+    background-color: var(--color-primary);
     /* border-radius: 10px; */
     position: absolute;
 
@@ -29,7 +29,7 @@
 
 .number-slider__inner {
     width: 100%;
-    background-color: midnightblue;
+    background-color: var(--color-secondary);
     /* border-radius: 10px; */
     position: absolute;
     bottom: 0;
