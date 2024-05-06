@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import './ArrowLauncher.css';
+import { formatPhoneNumber } from "../util/format";
 
 type NullableNum = number | null;
 
@@ -60,18 +61,21 @@ export default function ArrowLauncher() {
                     <input type="range" min={5} max={85} value={angle} onChange={(e) => setAngle(Number(e.target.value))} />
                     <label>Power</label>
                     <input type="range" min={20} max={50} value={power} onChange={(e) => setPower(Number(e.target.value))} />
-                    <button onClick={launch}>Launch</button>
+                    <button onClick={launch} disabled={launched || number !== null}>Launch</button>
                 </div>
             </div>
             <div className="phone-number__result">
                 { number !== null && <>
-                    <p>Phone number: {number.toFixed(0)}</p>
-                    <p>Is this your number?</p>
+                    { number > 0 && <>
+                        <p>Phone number: {formatPhoneNumber(number)}</p>
+                        <p>Is this your number?</p>
+                    </>}
+                    { number === -1 && <p>Missed target</p> }
                     <button onClick={() => {
                         setNumber(null);
                         setLaunched(false);
                         setPhysics({ x: 20, y: 20, xVel: 0, yVel: 0 });
-                    }}>No</button>
+                    }}>Try Again</button>
                 </> }
             </div>
         </div>

@@ -5,9 +5,10 @@ function App() {
   
   return (
     <>
-      <h1>Phone UX Is Important</h1>
+      <h1>UX Is Important</h1>
+      <h2>The Wave:</h2>
       <NumberSliders />
-      <hr />
+      <h2>Hard Launch:</h2>
       <ArrowLauncher />
     </>
   )

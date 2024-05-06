@@ -21,4 +21,10 @@ button {
     border-radius: 8px;
     padding: 8px;
     cursor: pointer;
+
+    &:disabled {
+        background-color: lightgray;
+        color: darkgray;
+        cursor: not-allowed;
+    }
 }
